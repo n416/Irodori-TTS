@@ -573,6 +573,7 @@ def main() -> None:
         share=bool(args.share),
         debug=bool(args.debug),
         css=EMOJI_PALETTE_CSS,
+        show_api=False,
     )
 
 
