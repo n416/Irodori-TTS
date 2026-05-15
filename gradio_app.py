@@ -572,8 +572,7 @@ def main() -> None:
         server_port=args.server_port,
         share=bool(args.share),
         debug=bool(args.debug),
-        css=EMOJI_PALETTE_CSS,
-        show_api=False,
+        css=EMOJI_PALETTE_CSS + "\nfooter {display: none !important;}",
     )
 
 
