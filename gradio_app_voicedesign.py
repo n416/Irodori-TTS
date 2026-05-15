@@ -578,6 +578,18 @@ def build_ui() -> gr.Blocks:
         )
         clear_cache_btn.click(_clear_runtime_cache, outputs=[clear_cache_msg])
 
+        demo.load(
+            fn=_describe_runtime,
+            inputs=[
+                checkpoint,
+                model_device,
+                model_precision,
+                codec_device,
+                codec_precision,
+            ],
+            outputs=[clear_cache_msg],
+        )
+
     return demo
 
 
